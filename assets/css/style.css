@@ -1,0 +1,391 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "nav"
+    "aside"
+    "main"
+    "footer";
+}
+.grid-item {
+  padding: 10px;
+}
+.grid-item-main {
+  padding: 10px;
+  margin-bottom: 60px;
+}
+nav {
+  grid-area: nav;
+  background-color: rgb(85, 190, 111);
+  height: 60px;
+  width: 100vw;
+  position: fixed;
+}
+aside {
+  grid-area: aside;
+  height: 80px;
+  display: grid;
+  justify-content: center;
+  margin-top: 40px;
+}
+main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 75px;
+}
+footer {
+  grid-area: footer;
+  background-color: rgb(85, 190, 111);
+  text-align: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+}
+.menu-inicio {
+  display: flex;
+  align-items: center;
+}
+.inicio {
+  display: flex;
+  justify-content: space-between;
+}
+.p-menu {
+  padding-inline: 30px;
+  font-weight: 800;
+  color: black;
+}
+.p-menu-b {
+  padding-inline: 15px;
+  font-weight: 800;
+  color: black;
+}
+.p-menu-b:hover {
+  color: white;
+}
+.title {
+  font-size: 2rem;
+  margin-left: 20px;
+}
+.title:hover {
+  transform: scale(1.05);
+}
+.filtro {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(228, 224, 224);
+}
+.filtro div {
+  margin: 15px;
+}
+.card,
+img {
+  width: 200px;
+  border-radius: 12px 12px 0px 0px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  width: 300px;
+  height: 495px;
+  border: 1px solid grey;
+  border-radius: 12px;
+  margin: 10px;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+.card-container {
+  display: flex;
+  justify-content: space-between right;
+  column-gap: 80px;
+  row-gap: 30px;
+  flex-wrap: wrap;
+}
+.card-img {
+  width: 300px;
+  align-items: center;
+}
+button {
+  border: none;
+  width: 100%;
+  background-color: rgb(50, 16, 82);
+  padding: 10px;
+  color: white;
+  border-radius: 0px 0px 12px 12px;
+}
+.card-p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+select {
+  width: 200px;
+  padding: 5px;
+  border-radius: 10px;
+}
+.paginado {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 90px;
+  background-color: white;
+}
+.paginado a {
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+  border: 0.5px solid black;
+  margin: 5px 5px 0px 5px;
+}
+.paginado a:hover {
+  background-color: rgb(85, 190, 111);
+}
+.grid-item i:hover {
+  transform: scale(1.25);
+}
+@media (width > 576px) {
+  .grid-container {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas:
+      "nav aside aside"
+      "nav main main"
+      "nav main main"
+      "footer main main";
+  }
+  nav {
+    width: 100%;
+  }
+  nav,
+  .inicio {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    height: 100vh;
+    margin: 0px;
+  }
+  nav,
+  .menu-inicio {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: 100%;
+    padding-top: 15px;
+  }
+  .grid-item {
+    width: 220px;
+  }
+  aside {
+    margin-top: 0px;
+    width: 100%;
+  }
+  .grid-item-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 40px;
+  }
+  .p-menu-b {
+    padding-top: 15px;
+
+    font-size: large;
+  }
+  .icon {
+    display: none;
+    color: transparent;
+  }
+  footer {
+    height: 100px;
+  }
+  .title {
+    font-size: xx-large;
+    width: 220px;
+    padding-left: 0px;
+    margin-left: 12px;
+  }
+  .paginado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background-color: white;
+  }
+  .paginado a {
+    margin: 10px;
+  }
+  .card {
+    width: 200px;
+    height: 350px;
+  }
+  .card-img {
+    width: 200px;
+  }
+  .p-menu-b {
+    padding-inline: 15px;
+    font-weight: 800;
+    color: black;
+  }
+  .p-menu-b:hover {
+    color: white;
+  }
+  .title {
+    font-size: 2rem;
+    -webkit-text-stroke: 0.5px rgb(0, 0, 0);
+    margin-left: 20px;
+  }
+  .title:hover {
+    transform: scale(1.05);
+  }
+}
+@media (width > 992px) {
+  .grid-container {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-areas:
+      "nav aside aside"
+      "nav main main"
+      "nav main main"
+      "footer main main";
+  }
+  nav,
+  .inicio {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    height: 100vh;
+    margin: 0px;
+  }
+  nav,
+  .menu-inicio {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: 100%;
+    padding-top: 15px;
+  }
+  .grid-item {
+    width: 270px;
+  }
+  aside {
+    margin-top: 0px;
+    margin-left: 0px;
+    width: 100%;
+  }
+  .grid-item-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 60px;
+  }
+  .p-menu-b {
+    padding-top: 15px;
+    font-size: large;
+  }
+  .icon {
+    display: none;
+    color: transparent;
+  }
+  footer {
+    height: 100px;
+  }
+  .title {
+    font-size: xx-large;
+    width: 220px;
+    padding-left: 0px;
+    margin-left: 12px;
+  }
+  .paginado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background-color: white;
+  }
+  .paginado a {
+    margin: 10px;
+  }
+  .card {
+    width: 300px;
+    height: 495px;
+  }
+  .card-img {
+    width: 300px;
+  }
+  .p-menu-b {
+    padding-inline: 15px;
+    font-weight: 800;
+    color: black;
+  }
+  .p-menu-b:hover {
+    color: white;
+  }
+  .title {
+    font-size: 2rem;
+    -webkit-text-stroke: 0.5px rgb(0, 0, 0);
+    margin-left: 10px;
+  }
+  .title:hover {
+    transform: scale(1.05);
+  }
+}
+@media (width < 576px) {
+  .p-menu-b {
+    display: none;
+  }
+  .medium {
+    display: none;
+  }
+  nav {
+    height: 60px;
+    position: fixed;
+    font-size: small;
+  }
+  aside {
+    grid-area: aside;
+    height: 80px;
+    display: grid;
+    justify-content: center;
+    margin-top: 40px;
+  }
+  main {
+    margin-bottom: 0px;
+  }
+  footer {
+    text-align: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    font-size: small;
+  }
+  .paginado {
+    background-color: white;
+    width: 100%;
+  }
+}
